@@ -1,0 +1,21 @@
+<%- include content/header.ejs %>
+<%- include content/main_nav.ejs %>
+ 
+
+
+        <% if (title == "Home") { %> 
+         <% include home.ejs %>
+         <% } else if (title == "About Me") { %>
+           <% include about.ejs %>
+         <% } else if (title == "Projects") { %> 
+           <% include project.ejs %>
+         <% } else if (title == "Services") { %> 
+           <% include services.ejs %>
+         <% } else if (title == "Contact Me") { %> 
+           <% include contact.ejs %>
+         <% } else { %>
+
+         <% } %>
+ 
+
+<%- include content/footer.ejs %>
