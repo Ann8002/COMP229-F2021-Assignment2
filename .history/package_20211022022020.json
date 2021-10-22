@@ -1,0 +1,46 @@
+{
+  "name": "comp229-f2021-sb-p",
+  "version": "0.0.1",
+  "description": "Assignment1 continue",
+  "author": "Sindhu Binil",
+  "main": "server.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": "^14.18.1",
+    "npm": "^6.0.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "@popperjs/core": "^2.10.1",
+    "bootstrap": "^5.1.1",
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.3.2",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "http-errors": "^1.8.0",
+    "jquery": "^3.6.0",
+    "mongoose": "^6.0.11",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "@types/bootstrap": "^5.1.6",
+    "@types/cookie-parser": "^1.4.2",
+    "@types/debug": "^4.1.7",
+    "@types/ejs": "^3.1.0",
+    "@types/express": "^4.17.13",
+    "@types/http-errors": "^1.8.1",
+    "@types/jquery": "^3.5.6",
+    "@types/morgan": "^1.9.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ann8002/COMP229-F2021-P-SB.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ann8002/COMP229-F2021-P-SB/issues"
+  },
+  "homepage": "https://github.com/Ann8002/COMP229-F2021-P-SB#readme"
+}
