@@ -11,7 +11,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
 // database set up
-import mongoose, {mongo} from 'mongoose';
+import mongoose, {mongo } from 'mongoose';
 
 import indexRouter from '../Routes/index';
 
