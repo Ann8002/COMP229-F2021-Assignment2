@@ -1,0 +1,33 @@
+
+
+<div class="row">
+    <div class="col">
+
+        <table class="table table-stripped table-bordered table-hover">
+            <thread class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Contact Number</th>
+                    <th scope="col">Email Address</th>
+                </tr>
+
+            </thread>
+            <tbody>
+                <% for(let count=0; count < address.length, count++) { %>
+
+                    <!-- Repeatable Row Template -->
+                    <tr>
+                        <th scope="row"><%= count + 1 %></th>
+                        <td><%= address[count].name %></td>
+                        <td><%= address[count].number %></td>
+                        <td><%= address[count].email %></td>
+                        <td></td>
+                    </tr>
+
+                <% } %>
+            </tbody>
+        </table>
+
+    </div>
+</div>
