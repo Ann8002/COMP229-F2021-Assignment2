@@ -2,6 +2,8 @@ import express from 'express';
 const router = express.Router();
 export default router;
 
+// get a reference to the Address Model Class
+import Address from '../Models/game';
 
 // instantiate an object of type index controller
 import { DisplayAboutPage, DisplayContactPage, DisplayAddressListPage, DisplayHomePage, DisplayProjectsPage, DisplayServicesPage } from '../Controllers/index';
