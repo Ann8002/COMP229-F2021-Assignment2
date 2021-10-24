@@ -6,13 +6,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const router = express_1.default.Router();
 exports.default = router;
-<<<<<<< HEAD
-// get a reference to the Inform Model Class
-const inform_1 = __importDefault(require("../Models/inform"));
-=======
 // instantiate an object of type index controller
 const index_1 = require("../Controllers/index");
->>>>>>> 7f16fe70abff719518a3fcb84ca1de0fed67740c
 /* GET home page. */
 router.get('/', index_1.DisplayHomePage);
 /* GET home page. */
@@ -24,19 +19,8 @@ router.get('/projects', index_1.DisplayProjectsPage);
 /* GET services page. */
 router.get('/services', index_1.DisplayServicesPage);
 /* GET contact page. */
-<<<<<<< HEAD
-router.get('/contact', function (req, res, next) {
-    res.render('index', { title: 'Contact Me', page: 'contact' });
-});
-/* GET address-list */
-router.get('/address-list', function (req, res, next) {
-    res.render('index', { title: 'Business Contact List', page: 'address-list' });
-        
-});
-=======
 router.get('/contact', index_1.DisplayContactPage);
 /* GET games-list */
 router.get('/address-list', index_1.DisplayAddressListPage);
->>>>>>> 7f16fe70abff719518a3fcb84ca1de0fed67740c
 //module.exports = router;
 //# sourceMappingURL=index.js.map

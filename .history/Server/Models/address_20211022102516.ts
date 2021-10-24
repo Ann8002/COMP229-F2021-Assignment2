@@ -5,7 +5,7 @@ const AddressSchema = new Schema
 ({
     name: String,
     number: String,
-    email: String
+    email: String,
     },
 {
     collection: "address"

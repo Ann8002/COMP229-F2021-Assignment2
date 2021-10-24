@@ -39,11 +39,7 @@ const app = (0, express_1.default)();
 exports.default = app;
 // DB Configuration
 const DBConfig = __importStar(require("./db"));
-<<<<<<< HEAD
 mongoose_1.default.connect(DBConfig.LocalURI, { useNewUrlParser: true, useUnifiedTopology: true });
-=======
-mongoose_1.default.connect(DBConfig.RemoteURI, { useNewUrlParser: true, useUnifiedTopology: true });
->>>>>>> 7f16fe70abff719518a3fcb84ca1de0fed67740c
 const db = mongoose_1.default.connection; // alias for the mongoose connection
 db.on("error", function () {
     console.error("Connection Error");

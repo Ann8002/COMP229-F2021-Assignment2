@@ -1,0 +1,38 @@
+<!--COMP229 - S2021 - Sindhu Binil, ID# 301150331 17-10-2021-->
+
+
+<div class="p-3 mb-2 bg-info text-center"><h1>Address List</h1>
+</div>
+
+
+<div class="row">
+    <div class="col">
+
+        <table class="table table-stripped table-bordered table-hover">
+            <thread class="table-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Contact Number</th>
+                    <th scope="col">Email Address</th>
+                </tr>
+
+            </thread>
+            <tbody>
+                <% for(let count=0; count < address.length, count++) { %>
+
+                    <!-- Repeatable Row Template -->
+                    <tr>
+                        <th scope="row"><%= count + 1 %></th>
+                        <td><%= address[count].name %></td>
+                        <td><%= address[count].number %></td>
+                        <td><%= address[count].email %></td>
+                        <td></td>
+                    </tr>
+
+                <% } %>
+            </tbody>
+        </table>
+
+    </div>
+</div>

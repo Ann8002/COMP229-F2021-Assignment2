@@ -11,7 +11,7 @@ import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 
 // database set up
-import mongoose, {mongo} from 'mongoose';
+import mongoose, {mongo } from 'mongoose';
 
 import indexRouter from '../Routes/index';
 
@@ -20,11 +20,7 @@ export default app;
 
 // DB Configuration
 import * as DBConfig from './db';
-<<<<<<< HEAD
-mongoose.connect(DBConfig.LocalURI, {useNewUrlParser: true, useUnifiedTopology: true});
-=======
 mongoose.connect(DBConfig.RemoteURI, {useNewUrlParser: true, useUnifiedTopology: true});
->>>>>>> 7f16fe70abff719518a3fcb84ca1de0fed67740c
 
 const db = mongoose.connection; // alias for the mongoose connection
 db.on("error", function()

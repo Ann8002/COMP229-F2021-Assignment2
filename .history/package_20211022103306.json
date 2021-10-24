@@ -1,6 +1,6 @@
 {
   "name": "comp229-f2021-sb-p",
-  "version": "0.0.2",
+  "version": "0.0.1",
   "description": "Assignment2",
   "author": "Sindhu Binil",
   "main": "server.js",
@@ -10,9 +10,8 @@
   },
   "engines": {
     "node": "^14.18.1",
-    "npm": "^6.0.0",
-    "yarn": "^1.22.15"
-
+    "npm": "^6.0.0"
+    
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
