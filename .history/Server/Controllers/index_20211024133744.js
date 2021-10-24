@@ -10,7 +10,7 @@ const passport_1 = __importDefault(require("passport"));
 // create an instance of the User Model
 const user_1 = __importDefault(require("../Models/user"));
 // get a reference to the Inform Model Class
-const inform_1 = __importDefault(require("../Models/inform"));
+const game_1 = __importDefault(require("../Models/inform"));
 function DisplayHomePage(req, res, next) {
     res.render('index', { title: 'Home', page: 'home' });
 }
@@ -33,12 +33,12 @@ function DisplayContactPage(req, res, next) {
 exports.DisplayContactPage = DisplayContactPage;
 function DisplayAddressListPage(req, res, next) {
     // db.address.find()
-    inform_1.default.find(function (err, addressCollection) {
+    address_1.default.find(function (err, addressCollection) {
         if (err) {
             console.error(err);
             res.end(err);
         }
-        res.render('index', { title: 'Business Contacts', page: 'address-list', address: addressCollection });
+        res.render('index', { title: 'Business Contact List', page: 'address-list', address: addressCollection });
     });
 }
 exports.DisplayAddressListPage = DisplayAddressListPage;

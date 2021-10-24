@@ -5,45 +5,39 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProcessLogoutPage = exports.ProcessRegisterPage = exports.DisplayRegisterPage = exports.ProcessLoginPage = exports.DisplayLoginPage = exports.DisplayAddressListPage = exports.DisplayContactPage = exports.DisplayServicesPage = exports.DisplayProjectsPage = exports.DisplayAboutPage = exports.DisplayHomePage = void 0;
-const passport_1 = __importDefault(require("passport"));
-// create an instance of the User Model
-const user_1 = __importDefault(require("../Models/user"));
+exports.DisplayContactPage = exports.DisplayAddressListPage = exports.DisplayServicesPage = exports.DisplayProjectsPage = exports.DisplayAboutPage = exports.DisplayHomePage = void 0;
 // get a reference to the Inform Model Class
-const inform_1 = __importDefault(require("../Models/inform"));
+const address_1 = __importDefault(require("../Models/inform"));
 function DisplayHomePage(req, res, next) {
     res.render('index', { title: 'Home', page: 'home' });
 }
 exports.DisplayHomePage = DisplayHomePage;
 function DisplayAboutPage(req, res, next) {
-    res.render('index', { title: 'About Me', page: 'about' });
+    res.render('index', { title: 'About Us', page: 'about' });
 }
 exports.DisplayAboutPage = DisplayAboutPage;
 function DisplayProjectsPage(req, res, next) {
-    res.render('index', { title: 'My Projects', page: 'projects' });
+    res.render('index', { title: 'Our Projects', page: 'projects' });
 }
 exports.DisplayProjectsPage = DisplayProjectsPage;
 function DisplayServicesPage(req, res, next) {
-    res.render('index', { title: 'My Services', page: 'services' });
+    res.render('index', { title: 'Our Services', page: 'services' });
 }
 exports.DisplayServicesPage = DisplayServicesPage;
-function DisplayContactPage(req, res, next) {
-    res.render('index', { title: 'Contact Me', page: 'contact' });
-}
-exports.DisplayContactPage = DisplayContactPage;
 function DisplayAddressListPage(req, res, next) {
     // db.address.find()
-    inform_1.default.find(function (err, addressCollection) {
+    address_1.default.find(function (err, addressCollection) {
         if (err) {
             console.error(err);
             res.end(err);
         }
-        res.render('index', { title: 'Business Contacts', page: 'address-list', address: addressCollection });
+        res.render('index', { title: 'Business Contact List', page: 'address-list', address: addressCollection });
     });
 }
-exports.DisplayAddressListPage = DisplayAddressListPage;
-/* functions for authentication */
+exports.DisplayContactPage = DisplayContactPage;
+//# sourceMappingURL=index.js.map
 
+/* functions for authentication */
 function DisplayLoginPage(req, res, next) {
     res.render('index', { title: 'Login', page: 'login' });
 }
@@ -95,7 +89,7 @@ function ProcessRegisterPage(req, res, next) {
         }
         // after successful registration - let's login the user
         return passport_1.default.authenticate('local')(req, res, () => {
-            return res.redirect('/games-list');
+            return res.redirect('/address-list');
         });
     });
 }

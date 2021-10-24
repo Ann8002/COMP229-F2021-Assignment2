@@ -11,9 +11,7 @@ const passport_1 = __importDefault(require("passport"));
 const user_1 = __importDefault(require("../Models/user"));
 // get a reference to the Inform Model Class
 const inform_1 = __importDefault(require("../Models/inform"));
-function DisplayHomePage(req, res, next) {
-    res.render('index', { title: 'Home', page: 'home' });
-}
+
 exports.DisplayHomePage = DisplayHomePage;
 function DisplayAboutPage(req, res, next) {
     res.render('index', { title: 'About Me', page: 'about' });

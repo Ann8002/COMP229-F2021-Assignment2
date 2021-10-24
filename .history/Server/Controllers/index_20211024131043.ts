@@ -5,7 +5,7 @@ import passport from 'passport';
 // create an instance of the User Model
 import User from '../Models/user';
 
-// get a reference to the Game Model Class
+// get a reference to the Inform Model Class
 import Game from '../Models/inform';
 
 
@@ -50,6 +50,7 @@ export function DisplayAddressListPage(req: Request, res: Response, next: NextFu
   });
 }
 
+
 /* functions for authentication */
 
 export function DisplayLoginPage(req: Request, res: Response, next: NextFunction): void
@@ -88,7 +89,7 @@ export function ProcessLoginPage(req: Request, res: Response, next: NextFunction
 
       console.log("Logged in Successfully");
 
-      return res.redirect('/games-list');
+      return res.redirect('/address-list');
     });
   })(req, res, next);
 }

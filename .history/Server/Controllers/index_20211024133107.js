@@ -10,25 +10,25 @@ const passport_1 = __importDefault(require("passport"));
 // create an instance of the User Model
 const user_1 = __importDefault(require("../Models/user"));
 // get a reference to the Inform Model Class
-const inform_1 = __importDefault(require("../Models/inform"));
+const game_1 = __importDefault(require("../Models/inform"));
 function DisplayHomePage(req, res, next) {
     res.render('index', { title: 'Home', page: 'home' });
 }
 exports.DisplayHomePage = DisplayHomePage;
 function DisplayAboutPage(req, res, next) {
-    res.render('index', { title: 'About Me', page: 'about' });
+    res.render('index', { title: 'About Us', page: 'about' });
 }
 exports.DisplayAboutPage = DisplayAboutPage;
 function DisplayProjectsPage(req, res, next) {
-    res.render('index', { title: 'My Projects', page: 'projects' });
+    res.render('index', { title: 'Our Projects', page: 'projects' });
 }
 exports.DisplayProjectsPage = DisplayProjectsPage;
 function DisplayServicesPage(req, res, next) {
-    res.render('index', { title: 'My Services', page: 'services' });
+    res.render('index', { title: 'Our Services', page: 'services' });
 }
 exports.DisplayServicesPage = DisplayServicesPage;
 function DisplayContactPage(req, res, next) {
-    res.render('index', { title: 'Contact Me', page: 'contact' });
+    res.render('index', { title: 'Contact Us', page: 'contact' });
 }
 exports.DisplayContactPage = DisplayContactPage;
 function DisplayAddressListPage(req, res, next) {
@@ -38,7 +38,7 @@ function DisplayAddressListPage(req, res, next) {
             console.error(err);
             res.end(err);
         }
-        res.render('index', { title: 'Business Contacts', page: 'address-list', address: addressCollection });
+        res.render('index', { title: 'Address List', page: 'address-list', address: addressCollection });
     });
 }
 exports.DisplayAddressListPage = DisplayAddressListPage;
