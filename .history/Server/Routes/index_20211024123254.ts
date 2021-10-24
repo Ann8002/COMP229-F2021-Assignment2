@@ -42,6 +42,6 @@ router.post('/register', ProcessRegisterPage);
 router.get('/logout', ProcessLogoutPage);
 
 /* GET address-list-add */
-router.get('/address-list-add', DisplayAddressListAddPage);
+router.get('/add', DisplayAddressListAddPage);
 
 //module.exports = router;

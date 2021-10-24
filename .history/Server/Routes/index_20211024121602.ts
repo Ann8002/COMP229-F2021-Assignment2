@@ -3,7 +3,7 @@ const router = express.Router();
 export default router;
 
 // instantiate an object of type index controller
-import {DisplayAboutPage, DisplayContactPage, DisplayAddressListPage, DisplayHomePage, DisplayLoginPage, DisplayProjectsPage, DisplayRegisterPage, DisplayServicesPage, ProcessLoginPage, ProcessLogoutPage, ProcessRegisterPage, DisplayAddressListAddPage} from '../Controllers/index';
+import {DisplayAboutPage, DisplayContactPage, DisplayAddressListPage, DisplayHomePage, DisplayLoginPage, DisplayProjectsPage, DisplayRegisterPage, DisplayServicesPage, ProcessLoginPage, ProcessLogoutPage, ProcessRegisterPage } from '../Controllers/index';
 
 /* GET home page. */
 router.get('/', DisplayHomePage);

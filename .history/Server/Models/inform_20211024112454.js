@@ -17,3 +17,28 @@ const Model = mongoose_1.default.model("Inform", InformSchema);
 exports.default = Model;
 //# sourceMappingURL=inform.js.map
 
+/* GET Route for displaying Add page - CREATE Operation */
+
+router.get('/add', (req, res, next) => {
+
+});
+
+/* GET Route for processing Add page - CREATE Operation */
+router.post('/add', (req, res, next) => {
+
+});
+/* GET Route for displaying Edit page - CREATE Operation */
+router.get('/edit/:id', (req, res, next) => {
+
+});
+/* GET Route for processing Add page - CREATE Operation */
+router.post('/edit/:id', (req, res, next) => {
+
+});
+/* GET to perform Deletion - DELETE Operation */
+
+router.get('/delete/:id', (req, res, next) => {
+
+});
+
+module.exports = router;

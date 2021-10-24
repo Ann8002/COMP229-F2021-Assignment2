@@ -104,3 +104,8 @@ function ProcessLogoutPage(req, res, next) {
 }
 exports.ProcessLogoutPage = ProcessLogoutPage;
 //# sourceMappingURL=index.js.map
+
+exports.DisplayAddressListAddPage = DisplayAddressListAddPage;
+function DisplayContactPage(req, res, next) {
+    res.render('index', { title: 'Contact Us', page: 'contact' });
+}
