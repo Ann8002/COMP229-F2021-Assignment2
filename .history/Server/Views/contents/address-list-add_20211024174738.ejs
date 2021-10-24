@@ -1,0 +1,40 @@
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="addressTextField">Name</label>
+                    <input type="text" class="form-control"
+                    id="addressNameTextField"
+                    placeholder="Enter Your Name"
+                    name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="addressNumberField">Contact Number</label>
+                    <input type="number" class="form-control"
+                    id="addressNumberField"
+                    placeholder="Enter your Contact Number"
+                    name="number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="addressemailField">Email</label>
+                    <input type="email" class="form-control"
+                    id="addressemailField"
+                    placeholder="Enter your email address"
+                    name="email" required>
+                </div>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> Submit</button>
+                
+                    <a href="/address-list" class="btn btn-warning">
+                        <i class="fas fa-undo"></i> Cancel</a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
