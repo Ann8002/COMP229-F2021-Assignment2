@@ -9,22 +9,26 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Name</th>
-                    <th scope="col">Number</th>
-                    <th scope="col">Email</th>
+                    <th scope="col">Genre</th>
+                    <th scope="col">Developer</th>
+                    <th scope="col">Cost</th>
                 </tr>
             </thead>
             <tbody>
-                <% for(let count=0; count < address.length; count++) { %>
+                <% for(let count=0; count < games.length; count++) { %>
 
                     <!-- Repeatable Row Template -->
                     <tr>
                         <th scope="row"><%= count + 1 %></th>
-                        <td><%= address[count].name %></td>
-                        <td><%= address[count].number %></td>
-                        <td><%= address[count].email %></td>
+                        <td><%= games[count].name %></td>
+                        <td><%= games[count].genre %></td>
+                        <td><%= games[count].developer %></td>
+                        <td><%= games[count].cost %></td>
                     </tr>
+
                 <% } %>    
             </tbody>
         </table>
+
     </div>
 </div>
