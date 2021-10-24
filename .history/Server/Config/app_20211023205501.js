@@ -1,6 +1,5 @@
 "use strict";
 /*
-/* <!--COMP229-F2021-SB-P-ASSIGNMENT2 - Sindhu Binil, ID# 301150331 17-10-2021-->  
 * Author     : Sindhu Binil
 * Date       : October 17, 2021
 * Description: First Portfolio Project

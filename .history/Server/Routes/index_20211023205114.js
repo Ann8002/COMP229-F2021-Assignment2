@@ -1,4 +1,3 @@
-/* <!--COMP229-F2021-SB-P-ASSIGNMENT2 - Sindhu Binil, ID# 301150331 17-10-2021-->  */
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -35,7 +34,14 @@ router.get('/contact', function (req, res, next) {
 });
 /* GET address-list */
 router.get('/address-list', function (req, res, next) {
-    res.render('index', { title: 'Business Contact List', page: 'address-list' });
+    // db.games.find()
+    inform_1.default.find(function (err, addressCollection) {
+        if (err) {
+            console.error(err);
+            res.end(err);
+        }
+        console.log(addressCollection);
+    });
 });
 //module.exports = router;
 //# sourceMappingURL=index.js.map

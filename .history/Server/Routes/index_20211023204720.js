@@ -1,4 +1,3 @@
-/* <!--COMP229-F2021-SB-P-ASSIGNMENT2 - Sindhu Binil, ID# 301150331 17-10-2021-->  */
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -10,32 +9,23 @@ exports.default = router;
 // get a reference to the Inform Model Class
 const inform_1 = __importDefault(require("../Models/inform"));
 /* GET home page. */
-router.get('/', function (req, res, next) {
-    res.render('index', { title: 'Home', page: 'home' });
-});
+router.get('/', index_1.DisplayHomePage);
 /* GET home page. */
-router.get('/home', function (req, res, next) {
-    res.render('index', { title: 'Home', page: 'home' });
-});
+router.get('/home', index_1.DisplayHomePage);
 /* GET about page. */
-router.get('/about', function (req, res, next) {
-    res.render('index', { title: 'About Us', page: 'about' });
-});
+router.get('/about', index_1.DisplayAboutPage);
 /* GET projects page. */
-router.get('/projects', function (req, res, next) {
-    res.render('index', { title: 'Our Projects', page: 'projects' });
-});
+router.get('/projects', index_1.DisplayProjectsPage);
 /* GET services page. */
-router.get('/services', function (req, res, next) {
-    res.render('index', { title: 'Our Services', page: 'services' });
-});
+router.get('/services', index_1.DisplayServicesPage);
 /* GET contact page. */
 router.get('/contact', function (req, res, next) {
-    res.render('index', { title: 'Contact Us', page: 'contact' });
+    res.render('index', { title: 'Contact Me', page: 'contact' });
 });
 /* GET address-list */
 router.get('/address-list', function (req, res, next) {
     res.render('index', { title: 'Business Contact List', page: 'address-list' });
+        
 });
 //module.exports = router;
 //# sourceMappingURL=index.js.map
