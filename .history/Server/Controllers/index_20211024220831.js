@@ -106,4 +106,3 @@ function ProcessLogoutPage(req, res, next) {
     res.redirect('/login');
 }
 exports.ProcessLogoutPage = ProcessLogoutPage;
-//# sourceMappingURL=index.js.map

@@ -54,7 +54,6 @@ function ProcessLoginPage(req, res, next) {
         // are there any server errors?
         if (err) 
         {
-            console.error(err);
             return next(err);
         }
         // are there any login errors?
@@ -65,11 +64,11 @@ function ProcessLoginPage(req, res, next) {
         req.login(user, (err) => {
             // are there any db errors?
             if (err) {
-                console.error(err);
+                
                 return next(err);
             }
-            console.log("Logged in Successfully");
-            return res.redirect('/games-list');
+
+            return res.redirect('/address-list');
         });
     })(req, res, next);
 }
@@ -106,4 +105,3 @@ function ProcessLogoutPage(req, res, next) {
     res.redirect('/login');
 }
 exports.ProcessLogoutPage = ProcessLogoutPage;
-//# sourceMappingURL=index.js.map

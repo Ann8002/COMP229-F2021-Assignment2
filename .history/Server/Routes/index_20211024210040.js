@@ -33,5 +33,10 @@ router.get('/register', index_1.DisplayRegisterPage);
 router.post('/register', index_1.ProcessRegisterPage);
 /* GET logout page */
 router.get('/logout', index_1.ProcessLogoutPage);
+module.exports = router;
+/* GET display Edit Contact page */
+router.get('/address-list-edit', index_1.DisplayEditPage);
+/* POST process Edit Contact page */
+router.post('/address-list-edit', index_1.ProcessEditPage);
 //# sourceMappingURL=index.js.map
 

@@ -33,5 +33,23 @@ router.get('/register', index_1.DisplayRegisterPage);
 router.post('/register', index_1.ProcessRegisterPage);
 /* GET logout page */
 router.get('/logout', index_1.ProcessLogoutPage);
+module.exports = router;
 //# sourceMappingURL=index.js.map
 
+/* GET Route for the Address List page - READ Operation */
+router.get('address-list', index_1.DisplayAddressListPage);
+
+/* GET Route for displaying the Add page - CREATE Operation */
+router.get('address-list-add', requireAuth, index_1.DisplayAddressListAddPage);
+
+/* POST Route for processing the Add page - CREATE Operation */
+router.post('address-list-add', requireAuth, index_1.ProcessAddressListEditPage);
+
+/* GET Route for displaying the Edit page - UPDATE Operation */
+router.get('address-list-edit/:id', requireAuth, index_1.DisplayAddressListEditPage);
+
+/* POST Route for processing the Edit page - UPDATE Operation */
+router.post('/address-list-edit/:id', requireAuth, index_1.ProcessAddressListEditPage);
+
+/* GET to perform  Deletion - DELETE Operation */
+router.get('/delete/address-list/:id', requireAuth, index_1.performDelete);

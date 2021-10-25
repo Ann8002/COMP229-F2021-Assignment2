@@ -6,7 +6,7 @@ import passport from 'passport';
 import User from '../Models/user';
 
 // get a reference to the Inform Model Class
-import Inform from '../Models/inform';
+import Game from '../Models/inform';
 
 
 export function DisplayHomePage(req: Request, res: Response, next: NextFunction): void

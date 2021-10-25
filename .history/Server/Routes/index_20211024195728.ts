@@ -40,3 +40,4 @@ router.post('/register', ProcessRegisterPage);
 
 /* GET logout page */
 router.get('/logout', ProcessLogoutPage);
+//module.exports = router;

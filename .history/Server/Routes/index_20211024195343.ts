@@ -24,13 +24,13 @@ router.get('/services', DisplayServicesPage);
 router.get('/contact', DisplayContactPage);
 
 /* GET address-list */
-router.get('/address-list', DisplayAddressListPage);
+router.get('/address-list', DisplayLoginPage);
 
 /* GET display login page */
 router.get('/login', DisplayLoginPage);
 
 /* POST process login page */
-router.post('/login', ProcessLoginPage);
+router.post('/login', DisplayAddressListPage);
 
 /* GET display register page */
 router.get('/register', DisplayRegisterPage);
@@ -40,3 +40,4 @@ router.post('/register', ProcessRegisterPage);
 
 /* GET logout page */
 router.get('/logout', ProcessLogoutPage);
+//module.exports = router;

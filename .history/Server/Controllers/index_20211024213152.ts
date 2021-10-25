@@ -5,8 +5,8 @@ import passport from 'passport';
 // create an instance of the User Model
 import User from '../Models/user';
 
-// get a reference to the Inform Model Class
-import Inform from '../Models/inform';
+// get a reference to the Game Model Class
+import Game from '../Models/inform';
 
 
 export function DisplayHomePage(req: Request, res: Response, next: NextFunction): void
@@ -37,7 +37,7 @@ export function DisplayContactPage(req: Request, res: Response, next: NextFuncti
 export function DisplayAddressListPage(req: Request, res: Response, next: NextFunction): void
 {
     // db.address.find()
-  inform.find(function(err, addressCollection)
+  Inform.find(function(err, addressCollection)
   {
     if(err)
     {
@@ -88,7 +88,7 @@ export function ProcessLoginPage(req: Request, res: Response, next: NextFunction
 
       console.log("Logged in Successfully");
 
-      return res.redirect('/address-list');
+      return res.redirect('/games-list');
     });
   })(req, res, next);
 }
@@ -137,3 +137,12 @@ export function ProcessLogoutPage(req: Request, res: Response, next: NextFunctio
   res.redirect('/login');
 }
 
+export function DisplayEditPage(req: Request, res: Response, next: NextFunction): void
+{
+    res.render('index', { title: 'Edit Contact', page: 'address-list-edit'  });
+}
+
+export function ProcessEditPage(req: Request, res: Response, next: NextFunction): void
+{
+    res.render('index', { title: 'Edit Info', page: 'address-list-edit'  });
+}

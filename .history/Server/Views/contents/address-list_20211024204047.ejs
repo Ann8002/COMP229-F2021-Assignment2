@@ -30,7 +30,11 @@
                         <td><%= address[count].email %></td>
                         <td class="col-1">
                             <a href="address-list-edit<%= address[count]._id %>" class="btn btn-primary btn-sm"> 
-                            <i class="fas fa-pencil-alt"></i><a href="/address-list-edit"> Edit</a>
+                            <i class="fas fa-pencil-alt"></i> Edit</a>
+                            <div class="text-right">
+                        <button id="submitButton" type="submit" class="btn btn-primary btn-lg"><i class="fas fa-sign-in-alt"></i> Login</button>
+                        <a href="/" id="cancelButton" class="btn btn-warning btn-lg"><i class="fas fa-undo-alt"></i> Cancel</a>
+                    </div>
                         </td>
                         <td class="col-1">
                             <a href="address-list/delete<%= address[count]._id %>" class="btn btn-danger btn-sm"> 

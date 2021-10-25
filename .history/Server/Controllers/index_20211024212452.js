@@ -5,7 +5,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProcessLogoutPage = exports.ProcessRegisterPage = exports.DisplayRegisterPage = exports.ProcessLoginPage = exports.DisplayLoginPage = exports.DisplayAddressListPage = exports.DisplayContactPage = exports.DisplayServicesPage = exports.DisplayProjectsPage = exports.DisplayAboutPage = exports.DisplayHomePage = void 0;
+exports.ProcessEditPage = exports.DisplayEditPage = exports.ProcessLogoutPage = exports.ProcessRegisterPage = exports.DisplayRegisterPage = exports.ProcessLoginPage = exports.DisplayLoginPage = exports.DisplayAddressListPage = exports.DisplayContactPage = exports.DisplayServicesPage = exports.DisplayProjectsPage = exports.DisplayAboutPage = exports.DisplayHomePage = void 0;
 const passport_1 = __importDefault(require("passport"));
 // create an instance of the User Model
 const user_1 = __importDefault(require("../Models/user"));
@@ -38,14 +38,26 @@ function DisplayAddressListPage(req, res, next) {
             console.error(err);
             res.end(err);
         }
-        res.render('index', { title: 'Address List', page: 'address-list', address: addressCollection });
+        res.render('index', { title: 'Business Contacts', page: 'address-list', address: addressCollection });
     });
 }
 exports.DisplayAddressListPage = DisplayAddressListPage;
 /* functions for authentication */
 function DisplayLoginPage(req, res, next) {
     res.render('index', { title: 'Login', page: 'login' });
-    
+    // check if the user is already logged in
+    if(!user)
+    {
+        res.render('login',
+        {
+            messages: req.flash('loginMessage'),
+            displayName: req.user ? req.user.displayName : ''
+        })
+    }
+    else
+    {
+        return res.redirect('/');
+    }
 }
 exports.DisplayLoginPage = DisplayLoginPage;
 function ProcessLoginPage(req, res, next) {
@@ -54,7 +66,6 @@ function ProcessLoginPage(req, res, next) {
         // are there any server errors?
         if (err) 
         {
-            console.error(err);
             return next(err);
         }
         // are there any login errors?
@@ -65,11 +76,11 @@ function ProcessLoginPage(req, res, next) {
         req.login(user, (err) => {
             // are there any db errors?
             if (err) {
-                console.error(err);
+                
                 return next(err);
             }
-            console.log("Logged in Successfully");
-            return res.redirect('/games-list');
+
+            return res.redirect('/address-list');
         });
     })(req, res, next);
 }
@@ -106,4 +117,11 @@ function ProcessLogoutPage(req, res, next) {
     res.redirect('/login');
 }
 exports.ProcessLogoutPage = ProcessLogoutPage;
-//# sourceMappingURL=index.js.map
+function DisplayEditPage(req, res, next) {
+    res.render('index', { title: 'Edit Contacts', page: 'address-list-edit' });
+}
+
+exports.DisplayEditPage = DisplayEditPage;
+function ProcessEditPage(req, res, next) {
+    res.render('index', { title: 'Edit info', page: 'address-list-edit' });
+exports.DisplayHomePage = DisplayHomePage;
